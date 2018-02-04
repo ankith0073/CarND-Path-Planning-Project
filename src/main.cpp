@@ -277,7 +277,7 @@ int main() {
 						double check_car_s = sensor_fusion[i][5];
 						check_car_s += ((double)prev_size*0.02*check_speed);
 
-
+			// follows closely the question and answer session from https://www.youtube.com/watch?v=7sI3VHFPP0w path planning project
                         //compare the current lane information with the sensor fusion lane data to determine surroundings of the car
 						if ( car_lane == lane ) {
 							// Car in our lane.
