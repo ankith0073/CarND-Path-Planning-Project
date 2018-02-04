@@ -62,6 +62,8 @@ The ego car commands of weather to stay in the lane or change lane is taken from
 
 New waypoints in x and y are created(lines 353- 356). These waypoints are then used to interpolate points in between them using spline interpolation (lines 375- 276) which assures smoothness between the piecewise interpolated splines.
 
+The code ideas are inspired from https://www.youtube.com/watch?v=7sI3VHFPP0w, The question and answer session from path planning project
+
 ## Details
 
 1. The car uses a perfect controller and will visit every (x,y) point it recieves in the list every .02 seconds. The units for the (x,y) points are in meters and the spacing of the points determines the speed of the car. The vector going from a point to the next point in the list dictates the angle of the car. Acceleration both in the tangential and normal directions is measured along with the jerk, the rate of change of total Acceleration. The (x,y) point paths that the planner recieves should not have a total acceleration that goes over 10 m/s^2, also the jerk should not go over 50 m/s^3. (NOTE: As this is BETA, these requirements might change. Also currently jerk is over a .02 second interval, it would probably be better to average total acceleration over 1 second and measure jerk from that.
